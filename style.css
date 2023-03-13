@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(rgba(200, 245, 255, 0.8745098039), rgba(221, 255, 204, 0.8705882353));
+  background-attachment: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  min-width: 1300px;
+  overflow-y: hidden;
+}
+
+.navbar {
+  position: sticky;
+  margin-top: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "raleway";
+  font-size: 1.7rem;
+  font-weight: bold;
+  z-index: 10;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.navbar li {
+  margin-left: 30px;
+  text-shadow: 0px 0px 15px rgba(0, 143, 117, 0.309);
+  cursor: pointer;
+}
+
+.white {
+  background-color: white;
+  width: 110%;
+  height: 2000px;
+  z-index: 20;
+  filter: blur(50px);
+  margin-top: 150px;
+}
+
+.sun {
+  position: absolute;
+  top: 4%;
+  width: 600px;
+  height: 600px;
+  min-width: 600px;
+  min-height: 600px;
+  max-width: 2500px;
+  max-height: 2500px;
+  background-color: #fffffe;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow: 0px 0px 30px 30px rgba(255, 255, 255, 0.461);
+  animation: sun 2s ease-in-out infinite alternate;
+}
+
+.landing-page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  min-width: 1600px;
+}
+.landing-page .monstera-leaves {
+  top: -50px;
+  left: 0;
+  width: 60%;
+  height: 80vh;
+  position: absolute;
+  transition: all 0.2s ease;
+}
+.landing-page .objects {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60vh;
+  max-width: 900px;
+  min-width: 700px;
+}
+.landing-page .palm {
+  width: 1100px;
+  height: 100vh;
+  position: absolute;
+  top: -200px;
+  right: -230px;
+  transition: all 0.2s ease;
+}
+.landing-page .palm img {
+  right: 0;
+  width: 100%;
+}
+.landing-page .palm .trunk {
+  right: 30px;
+  width: 95%;
+}
+.landing-page .palm .palm-back {
+  width: 70%;
+  top: 70px;
+  right: 150px;
+  animation: monsteraBack 2s ease-in-out infinite alternate;
+}
+.landing-page img {
+  position: absolute;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 9%;
+  pointer-events: none;
+}
+
+.title1 {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 100vw;
+  height: 20%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 20px;
+  transition: all 0.2s ease;
+}
+.title1 h1 {
+  font-weight: 900;
+}
+.title1 .title-left {
+  /* IMPARA a SUONARE */
+  transform: rotate(-2deg);
+  width: 50%;
+  height: 200px;
+  font-family: "Raleway";
+  font-size: 9em;
+  text-align: left;
+  letter-spacing: -0.05em;
+  line-height: 95px;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.8s;
+  transition: all 0.2s ease;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1568627451);
+}
+.title1 .title-left.davanti {
+  margin-left: 8px;
+}
+.title1 .title-left:hover {
+  transform: translate(10px, 0px) rotateY(10deg) rotatez(-2deg);
+}
+.title1 .title-right {
+  transform: rotate(2deg);
+  width: 50%;
+  height: 200px;
+  /* UKULELE */
+  font-family: "Raleway";
+  font-size: 11em;
+  text-align: right;
+  letter-spacing: -0.05em;
+  color: white;
+  line-height: 110px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1568627451);
+  transition: transform 0.8s;
+}
+.title1 .title-right span {
+  margin-right: 20px;
+}
+.title1 .title-right.davanti2 {
+  margin-right: 10px;
+}
+.title1 .title-right:hover {
+  transform: translate(-12px, 0px) rotateY(15deg) rotatez(2deg);
+}
+
+.title-over {
+  transition: all 0.2s ease;
+}
+
+#spessore {
+  position: absolute;
+  bottom: 8%;
+  transition: all 0.2s ease;
+}
+#spessore h1 {
+  color: #86FFD5;
+}
+
+.monstera1 {
+  width: 500px;
+  top: 120px;
+  animation: monstera 2s ease-in-out infinite alternate;
+}
+
+.monstera2 {
+  top: 100px;
+  left: -190px;
+  animation: monsteraBack 1s ease-in-out infinite alternate;
+}
+
+.monstera3 {
+  top: 20px;
+  left: 100px;
+  width: 600px;
+  animation: monsteraBack 1s ease-in-out infinite alternate;
+}
+
+.objects {
+  position: relative;
+}
+.objects .ukulele {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.objects .coconut {
+  width: 100%;
+  right: 0;
+  top: -20px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+.objects .ball {
+  width: 70%;
+  right: 0;
+  top: 20px;
+  animation: ball 1.5s ease-in-out;
+  transition: all 0.2s ease;
+}
+.objects .sand-over {
+  position: absolute;
+  width: 160%;
+  bottom: -60%;
+  left: -295px;
+  z-index: 2;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.note {
+  position: absolute;
+  top: 42%;
+  left: 44%;
+  width: 300px;
+  animation: note-wind 1s ease-in-out infinite alternate;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sand {
+  position: static;
+  top: 130%;
+  width: 100%;
+  min-width: 1000px;
+}
+
+.sand2 {
+  position: static;
+  top: 40%;
+  width: 100%;
+}
+
+.sand-over-2 {
+  width: 100%;
+  bottom: -180px;
+  z-index: 10;
+  max-width: 1600px;
+  transition: all 0.2s ease;
+}
+
+.leave.one {
+  animation: leaveOne 2s ease-in-out infinite alternate;
+}
+
+.leave.two {
+  animation: leaveTwo 2s ease-in-out infinite alternate;
+}
+
+.leave.three {
+  animation: leaveThree 2s ease-in-out infinite alternate;
+}
+
+.leave.four {
+  animation: leaveFour 3s ease-in-out infinite alternate;
+}
+
+.info-container {
+  z-index: 10;
+}
+
+.cta {
+  position: relative;
+  width: 300px;
+  top: 10%;
+  font-size: 1.8rem;
+  font-family: "Raleway";
+  text-align: center;
+  display: none;
+  pointer-events: none;
+}
+.cta .testo {
+  color: #ff2e9d;
+  position: absolute;
+  text-shadow: 0px 0px 20px rgba(255, 46, 157, 0.7921568627);
+}
+
+.hand {
+  width: 600px;
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  animation: hand 1s ease-in-out infinite alternate;
+  right: 5%;
+  bottom: 10%;
+}
+
+@keyframes leaveOne {
+  from {
+    transform: rotateX(5deg);
+  }
+  to {
+    transform: rotateX(-1deg);
+  }
+}
+@keyframes leaveTwo {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+@keyframes leaveThree {
+  from {
+    transform: rotateZ(5deg);
+  }
+  to {
+    transform: rotateZ(-1deg);
+  }
+}
+@keyframes leaveFour {
+  from {
+    transform: rotate(-4deg);
+  }
+  to {
+    transform: rotate(2deg);
+  }
+}
+@keyframes monstera {
+  from {
+    transform: rotateZ(-2deg) translateY(-10px);
+  }
+  to {
+    transform: rotateZ(2deg) translateY(10px);
+  }
+}
+@keyframes monsteraBack {
+  from {
+    transform: rotateZ(-1deg) translateY(-5px);
+  }
+  to {
+    transform: rotateZ(1deg) translateY(5px);
+  }
+}
+@keyframes sun {
+  from {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.461);
+  }
+  to {
+    box-shadow: 0px 0px 100px 80px rgba(255, 255, 255, 0.727);
+  }
+}
+@keyframes ball {
+  from {
+    transform: translateX(-1000px) rotateZ(-360deg);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes note-wind {
+  from {
+    transform: rotatex(20deg) rotatey(10deg);
+  }
+  to {
+    transform: rotatex(2deg) rotatey(2deg);
+  }
+}
+.levitate {
+  animation: levitate 1s ease-in-out alternate infinite;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+@keyframes hand {
+  0% {
+    transform: scale(1.1) translateX(100px);
+  }
+  100% {
+    transform: scale(1) translateX(-50px);
+  }
+}
+@media screen and (max-width: 1400px) {
+  .sand-over {
+    top: 300px;
+  }
+  .title1 {
+    max-width: 1200px;
+  }
+}
+.wip {
+  position: absolute;
+  top: 30vh;
+  font-family: "Raleway";
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff2e9d;
+  text-shadow: 0px 0px 20px rgba(255, 46, 157, 0.7921568627);
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */
